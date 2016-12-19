@@ -1,8 +1,8 @@
 # point-of-sale-widget-example
 
 ## Description:
-A widget that can be used on each cash system that can open a webpage, and works also on Internet Explorer 8.
-It gets the available times from the resmio API, as well as the possible number of people for the booking group, and makes a reservation for the current day.
+This widget was thought to be used on touch cash systems that can open a webpage and to works on IE 8 too.
+It gets the availablities from the resmio API, as well as the possible number of people for the booking group, and makes a reservation for the current day.
 It's also possible to insert the name and the email of the guest for marketing purposes.
 
 ## Setup:
