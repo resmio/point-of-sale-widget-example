@@ -10,3 +10,7 @@ In **js** → **script.js** replace *the-fish* with your resmio ID:
 ```javascript
 var resmio_id = 'the-fish';
 ```
+Add your logo in the **img** folder and then in **index.html** replace *logo.png* with the name of your logo file:
+```css
+<a href="index.html"><img id="logo" class="img-responsive" src="img/logo.png" alt="logo"/></a>
+```
