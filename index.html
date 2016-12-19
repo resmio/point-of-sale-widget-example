@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Booking Widget</title>
+  <meta name="description" content="Booking Widget">
+  <meta name="author" content="Liliana Lietz">
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <link href = "css/style.css" rel = "stylesheet"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/ie8-and-down.css"/>
+  <![endif]-->
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/jquery.xdomainrequest.min.js"></script>
+
+
+</head>
+<!-- Get the availabilities onload -->
+<body onload="loadjson()">
+  <div class="container-fluid main">
+  <!-- Logo container -->
+    <div class="container-fluid" id="logo-container">
+      <a href="index.html"><img id="logo" class="img-responsive" src="img/logo.png" alt="logo"/></a>
+      <!-- Navigation Bar -->
+      <div class="nav">
+        <p style="text-align: center;">
+          <button class="navpoint btn btn-default" onclick="loadjson()" id="time"><p class="index">1</p><p class="step">Time</p></button>
+
+          <button class="navpoint btn btn-default" onclick="loadGuests()" id="people"><p class="index">2</p><p class="step">Guests</p></button>
+
+          <button class="navpoint btn btn-default" onclick="loadGuestsInfo()" id="confirm"><p class="index">3</p><p class="step">Guests Info</p></button>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid content main">
+  <!-- If no availabilities: -->
+    <div class="row" id="no-availabilities">
+      <div class="col-sm-4 col-sm-offset-4">
+        <p>No free places left!</p>
+      </div>
+    </div>
+    <!-- Else: -->
+    <!-- Show number of free places -->
+    <p id="all-places"></p>
+    <!-- Times container -->
+    <div class="row" id="time-container">
+      <div>
+        <p id="all-places"></p>
+        <p>Available times: </p>
+        <div id="time-table">
+        </div>
+      </div>
+    </div>
+    <!-- Guests number container -->
+    <div class="row" id="guests">
+      <div class="col-sm-6 col-sm-offset-3" id="guests-number">
+        <p id="places"></p>
+        <p>Please choose the number of guests: </p>
+        <div id="people-table">
+        </div>
+      </div>
+    </div>
+    <!-- Guests Info and Confirmation container -->
+    <div class="row" id="confirmation">
+      <div class="col-sm-8 col-sm-offset-2">
+        <p id="confirm"></p>
+        <form name="guest-data">
+          <p>Name:<input name="guest-name" id="name" type="text"><br></p>
+          <p>Email Address:<input id="email" type="text"><br></p>
+        </form>
+      </div>
+    </div>
+    <!-- next - back buttons row -->
+    <div class="row" id="next">
+      <div class="col-sm-4 col-sm-offset-4">
+        <button id="book" class="btn btn-success" onclick="postjson()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  Book now!</button>
+        <p id="loading"></br>Loading...</p>
+        <p id="success">Your booking was successful!<br /></p>
+        <p>
+          <button id="close" class="btn btn-warning" onclick="closeWindow()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>  Close Window</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
