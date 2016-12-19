@@ -6,7 +6,7 @@ It gets the available times from the resmio API, the possible number of people f
 It also allows to insert the name and the email of the guest to send him notifications and newsletters.
 
 ## Setup:
-In **js**->**script.js** replace *the-fish* with your resmio ID:
+In **js** → **script.js** replace *the-fish* with your resmio ID:
 ```javascript
 var resmio_id = 'the-fish';
 ```
